@@ -1,0 +1,32 @@
+<script src="{{url_for('static', filename='js/angular-chart.js')}}"></script>
+<link rel="stylesheet" href="{{url_for('static', filename='css/angular-chart.css')}}">
+
+<dl>
+    {% for key, value in users.items() %}
+        <dt>{{ key }}</dt>
+        {% for val in value %}
+            <dd>{{val}}</dd>
+        {% endfor %}
+    {% endfor %}
+</dl>
+
+<canvas id="line" class="chart chart-line" chart-data="data"
+  chart-labels="labels" chart-legend="true" chart-series="series"
+  chart-click="onClick" >
+</canvas> 
+
+
+<script type="text/javascript">
+    angular.module("app", ["{url_for('static', 'js/chart.js')}"]).controller("LineCtrl", function ($scope) {
+
+        $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
+        $scope.series = ['Series A', 'Series B'];
+        $scope.data = [
+                [65, 59, 80, 81, 56, 55, 40],
+                [28, 48, 40, 19, 86, 27, 90]
+        ];
+        $scope.onClick = function (points, evt) {
+                console.log(points, evt);
+        };
+    });
+</script>
