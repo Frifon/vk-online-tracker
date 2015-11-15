@@ -3,7 +3,6 @@
 __author__ = 'vient'
 
 from app.common.tools import vk_api_authorization
-from vk_api.vk_api import ApiError
 
 from collections import deque
 import traceback
