@@ -3,7 +3,7 @@ import time
 from datetime import datetime
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
-
+from vk_api.vk_api import ApiError
 
 def open_url(url):
 
