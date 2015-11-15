@@ -22,7 +22,6 @@ def after_users_get(response):
             values[res['id']].append(res)
         else:
             values[res['id']] = [res]
-    print (values)
 
 def get_users():
     for i in range(0, len(ids), 400):   
