@@ -3,7 +3,7 @@ from flask import render_template
 from app.common.api_requests import Add_request
 from time import time
 
-ids = ['frifon', 'id19295913']
+ids = ['frifon', 'id19295913', 'temet__nosce']
 values = {}
 
 @app.route('/')
